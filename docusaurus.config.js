@@ -63,27 +63,20 @@ module.exports = {
           className: 'V3_active',
         },
         {
-          label: 'Give Feedback',
-          to: 'https://forms.gle/13XtjmkwdXQ2jMn26',
+          label: 'Minithon',
+          to: 'https://sherry.social/minithon',
           position: 'right',
           className: 'persistent',
         },
         {
-          label: 'Uniswap Foundation',
-          to: 'https://www.uniswapfoundation.org/',
-          position: 'right',
-          className: 'persistent',
-        },
-        
-        {
-          to: 'https://app.uniswap.org/whitepaper-v4.pdf',
-          label: 'Whitepaper',
+          label: 'Sherry Labs',
+          to: 'https://sherry.social/',
           position: 'right',
           className: 'persistent',
         },
         {
           label: 'GitHub',
-          to: 'https://github.com/Uniswap/docs/',
+          to: 'https://github.com/sherrylabs/',
           position: 'right',
           className: 'persistent',
         },

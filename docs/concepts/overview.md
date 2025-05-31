@@ -29,6 +29,6 @@ Sherry's community is vibrant and growing. Engage with fellow Sherry enthusiasts
 
 
 
-## Getting Started with Sherry
+Getting Started with Sherry
 
 New to Sherry? Dive in quickly with our quick start guide and tutorials. Visit our interface to swap tokens or explore our developer docs for integration details. 
