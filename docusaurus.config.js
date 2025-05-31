@@ -31,10 +31,11 @@ module.exports = {
       appId: 'S0IDD0YGLZ',
     },
     navbar: {
-      title: 'Uniswap Docs',
+      title: '',
       logo: {
         alt: 'Uniswap Unicorn',
-        src: 'img/uni_dark_icon.svg',
+        src: 'img/sherry_black_logo.svg',
+        srcDark: 'img/sherry_white_logo.svg',
       },
       items: [
         {
