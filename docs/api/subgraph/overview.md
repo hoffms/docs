@@ -1,7 +1,7 @@
 ---
-id: overview
+id: subgraph-overview
 sidebar_position: 1
-title: Overview
+title: Subgraph Overview
 ---
 
 # The Uniswap Subgraph
@@ -31,4 +31,4 @@ Each subgraph has a dedicated endpoint for querying data, as well as a page on [
 
 - [Subgraph](https://thegraph.com/explorer/subgraphs/A3Np3RQbaBA6oKJgiwDJeo5T3zrYfGHPWFYayMwtNDum?view=Query&chain=arbitrum-one)
 - Graphql Endpoint: `https://gateway.thegraph.com/api/<YOUR_API_KEY_HERE>/subgraphs/id/A3Np3RQbaBA6oKJgiwDJeo5T3zrYfGHPWFYayMwtNDum`
-- Code: https://github.com/Uniswap/v2-subgraph
+- Code: https://github.com/Uniswap/v2-subgraph 

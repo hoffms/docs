@@ -57,7 +57,7 @@ module.exports = {
           className: 'V3_active',
         },
         {
-          to: '/api/subgraph/overview',
+          to: '/api/overview',
           label: 'APIs',
           position: 'left',
           className: 'V3_active',
@@ -340,7 +340,7 @@ module.exports = {
             from: '/docs/wrappers/integrating-with-wallets',
           },
           {
-            to: '/api/subgraph/overview',
+            to: '/api/overview',
             from: '/protocol/reference/v3/guides/querying-data',
           },
           {
@@ -648,7 +648,7 @@ module.exports = {
             from: '/sdk/2.0.0/guides/pricing',
           },
           {
-            to: '/api/subgraph/overview',
+            to: '/api/overview',
             from: '/sdk/subgraph/subgraph-data',
           },
           {
