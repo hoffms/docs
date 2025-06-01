@@ -51,7 +51,7 @@ module.exports = {
           className: 'V3_active',
         },
         {
-          to: '/sdk/v4/overview',
+          to: '/sdk/trigger-sdk/overview',
           label: 'SDKs',
           position: 'left',
           className: 'V3_active',
@@ -90,7 +90,7 @@ module.exports = {
           items: [
             {
               label: 'Dev Chat',
-              href: 'https://discord.com/invite/uniswap',
+              href: 'https://discord.com/invite/sherry',
             },
             {
               label: 'Feedback',
@@ -478,6 +478,86 @@ module.exports = {
           {
             to: '/concepts/protocol/oracle',
             from: '/v2/core-concepts/oracles/',
+          },
+          {
+            to: '/contracts/v3/reference/periphery/interfaces/IQuoter',
+            from: '/reference/periphery/interfaces/IQuoter',
+          },
+          {
+            to: '/sdk/v3/guides/web3-development-basics',
+            from: '/protocol/reference/smart-contracts',
+          },
+          {
+            to: '/contracts/v3/guides/providing-liquidity/collect-fees',
+            from: '/sdk/v3/guides/liquidity/04-collecting-fees.md',
+          },
+          {
+            to: '/contracts/v3/guides/providing-liquidity/collect-fees',
+            from: '/sdk/v3/guides/liquidity/03-collecting-fees.md',
+          },
+          {
+            to: '/contracts/v1/guides/pool-liquidity',
+            from: '/protocol/V1/guides/pool-liquidity',
+          },
+          {
+            to: '/concepts/resources',
+            from: '/protocol/concepts/advanced/resources',
+          },
+          {
+            to: '/contracts/v2/concepts/protocol-overview/smart-contracts',
+            from: '/contracts/v2/reference/smart-co',
+          },
+          {
+            to: '/contracts/v3/reference/core/interfaces/callback/IUniswapV3SwapCallback',
+            from: '/reference/core/interfaces/callback/IUniswapV3SwapCallback',
+          },
+          {
+            to: '/contracts/v3/reference/deployments/',
+            from: '/contracts/v3/reference/deploymentsletWETHAddress',
+          },
+          {
+            to: '/contracts/v3/guides/liquidity-mining/overview',
+            from: '/protocol/guides/liquidity-mining/liquidity-mining-overview',
+          },
+          {
+            to: '/contracts/v3/reference/core/interfaces/IUniswapV3Factory',
+            from: '/contracts/v3/reference/reference/core/interfaces/IUniswapV3Factory.md',
+          },
+          {
+            to: '/sdk/v3/guides/swaps/trading',
+            from: '/sdk/v3/guides/swaps/02-trading',
+          },
+          {
+            to: '/contracts/v4/guides/swap-routing',
+            from: '/contracts/universal-router/',
+          },
+          {
+            to: '/concepts/overview',
+            from: '/concepts/uniswap-',
+          },
+          {
+            to: '/sdk/v3/reference/overview',
+            from: '/sdk/v3/reference/README.md',
+          },
+          {
+            to: '/contracts/v3/reference/core/libraries/LowGasSafeMath',
+            from: '/reference/core/libraries/LowGasSafeMath',
+          },
+          {
+            to: '/sdk/v3/guides/swaps/routing',
+            from: '/sdk/v3/guides/trading/03-routing.md',
+          },
+          {
+            to: '/sdk/v3/guides/swaps/quoting',
+            from: '/sdk/v3/guides/quoting',
+          },
+          {
+            to: '/sdk/v1/reference/constants',
+            from: '/sdk/1.0.0/reference/constants',
+          },
+          {
+            to: '/concepts/uniswap-protocol',
+            from: '/protocol/V2/concepts/protocol-overview/',
           },
           {
             to: '/contracts/v3/reference/periphery/interfaces/IQuoter',

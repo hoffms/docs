@@ -23,6 +23,6 @@ We recommend taking a look at the [**Technical Reference**](./reference/overview
 [![Lint](https://github.com/Uniswap/uniswap-sdk-core/workflows/Lint/badge.svg)](https://github.com/Uniswap/uniswap-sdk-core/actions?query=workflow%3ALint)
 [![npm version](https://img.shields.io/npm/v/@uniswap/sdk-core/latest.svg)](https://www.npmjs.com/package/@uniswap/sdk-core/v/latest)
 [![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/sdk-core/latest.svg)](https://bundlephobia.com/result?p=@uniswap/sdk-core@latest)
-[![Discord](https://img.shields.io/badge/discord-join%20chat-blue.svg)](https://discord.com/channels/597638925346930701/607978109089611786)
+[![Discord](https://img.shields.io/badge/discord-join%20chat-blue.svg)](https://discord.com/invite/sherry)
 
 

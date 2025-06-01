@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 This guide walks you through the steps to embed the swap widget in your website in 2 minutes — whether your site is already a decentralized application (dApp) or not. With the swap widget, your users can trade ERC-20 tokens on the Uniswap Protocol without leaving your site!
 
-Here’s a live preview of the swap widget.
+Here's a live preview of the swap widget.
 
 <iframe
   width="376"
@@ -32,7 +32,7 @@ You can make the widget feel like a native part of your app by customizing the c
 
 ## Installing the Widgets Library {#installing-library}
 
-To get started, install the widgets library using npm or Yarn. If you don’t already use it, you’ll need to install `react-redux` as well.
+To get started, install the widgets library using npm or Yarn. If you don't already use it, you'll need to install `react-redux` as well.
 
 ```bash npm2yarn
 npm install --save @uniswap/widgets react-redux
@@ -53,12 +53,12 @@ function App() {
 }
 ```
 
-That’s it! You should now see a fully functional swap widget on your site. The widget is self-contained and gracefully handles all interactions with the Uniswap Protocol. It leverages the [Auto Router](/sdk/v3/guides/swaps/routing) to compute the best price across all Uniswap v2 and v3 pools.
+That's it! You should now see a fully functional swap widget on your site. The widget is self-contained and gracefully handles all interactions with the Uniswap Protocol. It leverages the [Auto Router](/sdk/v3/guides/swaps/routing) to compute the best price across all Uniswap v2 and v3 pools.
 
 See a full implementation of the swap widget in the `/cra` and `/nextjs` branches of the [widgets-demo](https://github.com/Uniswap/widgets-demo) repo.
 
 :::note Create React App V4
-All code snippets will work seamlessly if you use [Next.js](https://nextjs.org/) or [Create React App](https://create-react-app.dev/) V5. However, if you’re using Create React App V4, you’ll need to use the following `import` statements instead:
+All code snippets will work seamlessly if you use [Next.js](https://nextjs.org/) or [Create React App](https://create-react-app.dev/) V5. However, if you're using Create React App V4, you'll need to use the following `import` statements instead:
 
 ```jsx
 import { SwapWidget } from '@uniswap/widgets/dist/index.js'
@@ -77,7 +77,7 @@ Additional [optional parameters](/sdk/swap-widget/reference/v2#optional-paramete
 
 ## Web3 Provider {#web3-provider}
 
-The swap widget uses a web3 `provider` prop to allow users to connect their wallets, fetch balances, and submit transactions through the user’s connected wallet.
+The swap widget uses a web3 `provider` prop to allow users to connect their wallets, fetch balances, and submit transactions through the user's connected wallet.
 
 If your app does not maintain its own web3 provider, you can omit the `provider` prop. The widget will use built-in wallet connection functionality (for [WalletConnect](https://walletconnect.com/) and [MetaMask](https://metamask.io/)), making it easy for you to integrate web3 in your app!
 
@@ -88,7 +88,7 @@ You can directly use the providers returned from [web3-react](https://github.com
 When using [wagmi@v0.11](https://wagmi.sh/), `useProvider()` will return the fallback provider, *not* the wallet-connected provider. You should instead pass `useSigner<JsonRpcSigner>().data?.provider` to reflect the user's connected wallet.
 :::
 
-If you maintain a web3 provider on your app, you should also consider intercepting the swap widget's wallet connection flow. Do so by passing a handler returning `false` to the [`onConnectWalletClick`](/sdk/swap-widget/reference/v2#onConnectWalletClick) prop, which is triggered when the widget's "Connect wallet" button is clicked. Check out libraries such as [web3-react](https://github.com/Uniswap/web3-react), BlockNative’s [Onboard](https://www.blocknative.com/onboard), or Aragon’s [useWallet()](https://github.com/aragon/use-wallet) to build your own flow. To hide the swap widget's wallet connection flow entirely, pass `true` to the `hideConnectionUI` prop.
+If you maintain a web3 provider on your app, you should also consider intercepting the swap widget's wallet connection flow. Do so by passing a handler returning `false` to the [`onConnectWalletClick`](/sdk/swap-widget/reference/v2#onConnectWalletClick) prop, which is triggered when the widget's "Connect wallet" button is clicked. Check out libraries such as [web3-react](https://github.com/Uniswap/web3-react), BlockNative's [Onboard](https://www.blocknative.com/onboard), or Aragon's [useWallet()](https://github.com/aragon/use-wallet) to build your own flow. To hide the swap widget's wallet connection flow entirely, pass `true` to the `hideConnectionUI` prop.
 
 The widget will match the network currently selected by the passed provider. If the user switches networks in your app or in their connected wallet, that change will propagate to the widget as well. If the user connects to a network that is not supported by the swap widget, the widget will gracefully disable itself.
 
@@ -118,7 +118,7 @@ JSON-RPC endpoints are used to read data when no `provider` is connected. We str
 
 The widget will use these endpoints to fetch on-chain data and submit transactions for signature. If the user connects a MetaMask wallet, the widget will use the JSON-RPC provided by MetaMask when possible. [(See a list of all chains supported on widget.)](https://github.com/Uniswap/widgets/blob/main/src/constants/chains.ts#L4)
 
-If you don’t yet have JSON-RPC endpoints, you can easily create them with services like [Chainnodes](https://www.chainnodes.org), [Infura](https://infura.io/product/ethereum) or [Alchemy](https://www.alchemy.com/supernode).
+If you don't yet have JSON-RPC endpoints, you can easily create them with services like [Chainnodes](https://www.chainnodes.org), [Infura](https://infura.io/product/ethereum) or [Alchemy](https://www.alchemy.com/supernode).
 
 If you choose not to provide a `jsonRpcUrlMap` prop or are missing endpoints for some chains, the widget uses free public JSON-RPC endpoints to still allow users to interact with the widget and fetch price quotes. However, these public endpoints are NOT recommended for production environment usage, are severely rate-limited, and aren't necessarily as reliable. When possible, we'd recommend providing your own endpoints!
 
@@ -202,12 +202,12 @@ function App() {
 Please note that the `borderRadius` attribute is a multiplier from 0 to 1 of how much radius to apply. Since the widget uses different values of border radius (e.g. internal edges have tighter radii than external edges), `borderRadius` will apply your multiplier value on all instances so that the border radii still look proportionally correct.
 
 :::note Importing Fonts
-The swap widget fonts must be imported explicitly with `import '@uniswap/widgets/fonts.css'`. However, if you’re overriding the swap widget fonts with your own, or with a default font such as Helvetica in the example above, you can remove this `import` statement.
+The swap widget fonts must be imported explicitly with `import '@uniswap/widgets/fonts.css'`. However, if you're overriding the swap widget fonts with your own, or with a default font such as Helvetica in the example above, you can remove this `import` statement.
 :::
 
 ### Enabling Token Color Extraction {#enabling-color-extraction}
 
-By default, the background color of the output module will be set by the `module` attribute. You can optionally enable color extraction to flood the output module with the color of the selected output token. In the above example, DAI is the output token so the output module is flooded with DAI yellow.
+By default, the background color of the output module will be set by the `module` attribute. You can optionally enable color extraction to flood the output module with the color of the selected output token. In the above example, DAI is the output token so the output module is flooded with DAI yellow.
 
 To enable color extraction, set the `tokenColorExtraction` property to `true` in your `Theme` object.
 
@@ -244,7 +244,7 @@ function App() {
 
 ### Matching System Preference for Light and Dark Mode {#matching-system-light-dark-mode}
 
-You can match the user’s system preference for light/dark mode by using the `useSystemTheme` hook. This will return the default widget light or dark theme according to the user’s system configuration. You can extend this base theme with further customizations, as you will see in the next section.
+You can match the user's system preference for light/dark mode by using the `useSystemTheme` hook. This will return the default widget light or dark theme according to the user's system configuration. You can extend this base theme with further customizations, as you will see in the next section.
 
 ```tsx
 import { SwapWidget } from '@uniswap/widgets'
@@ -414,5 +414,5 @@ The widget has two main connectivity states depending on if the user has connect
 2. **After wallet connection**, the widget will be fully functional. The user will be able to fetch trade quotes and submit swap transactions using the JSON-RPC endpoint and web3 provider from their connected wallet.
 
 :::note Questions?
-Join the [Discord channel](https://discord.com/channels/597638925346930701/941447445844463676) to ask questions and get support from the Uniswap community.
+Join the [Discord channel](https://discord.com/invite/sherry) to ask questions and get support from the Uniswap community.
 :::

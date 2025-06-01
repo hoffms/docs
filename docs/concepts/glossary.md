@@ -4,110 +4,73 @@ title: Glossary
 sidebar_position: 6
 ---
 
-## Automated Market Maker
+This glossary provides definitions for key terms and concepts used throughout the Sherry documentation.
 
-An automated market maker is a smart contract on Ethereum that holds liquidity reserves. Users can trade against these reserves at prices determined by a fixed formula. Anyone may contribute liquidity to these smart contracts, earning pro-rata trading fees in return.
+## A
 
-## Asset
+**Action**
+A modular, declarative unit that defines what a Trigger dApp can do. Sherry supports four types of actions: Dynamic Actions, Blockchain Actions, Transfer Actions, and Flow Actions. Each action represents a specific task users can perform, such as sending tokens, calling smart contracts, or initiating multi-step workflows.
 
-While a digital asset can take many forms, the Uniswap Protocol supports ERC-20 token pairs, and represents a position in the form of an NFT (ERC-721).
+## B
 
-## Concentrated Liquidity
+**Blockchain Action**
+A type of Trigger action that enables direct interaction with smart contracts. It requires an ABI and contract address, and executes specific functions on the blockchain. Used for operations like minting NFTs, voting in DAOs, or other contract interactions.
 
-Liquidity that is allocated within a determined price range.
+## C
 
-## Constant Product Formula
+**Chain Context**
+The configuration that defines which blockchain(s) an action operates on. It includes a required `source` chain and an optional `destination` chain for cross-chain operations.
 
-The automated market making algorithm used by Uniswap. In v1 and v2, this was x\*y=k.
+**Cross-Chain Operation**
+A blockchain interaction that spans multiple networks, facilitated by the Wormhole protocol in Sherry. Enables operations like bridging assets between chains (e.g., Avalanche to Celo) while handling gas costs and message relaying automatically.
 
-## Core
+## D
 
-Smart contracts that are considered foundational, and are essential for Uniswap to exist. Upgrading to a new version of core would require deploying an entirely new set of smart contracts on Ethereum and would be considered a new version of the Uniswap Protocol.
+**Dynamic Action**
+A type of Trigger action designed for complex use cases requiring server-side logic. The backend dynamically constructs transactions based on user input, external data, or business rules. Ideal for DeFi strategies, dynamic pricing, or AI-powered recommendations.
 
-## ERC20
+## F
 
-ERC20 tokens are fungible tokens on Ethereum. Uniswap supports all standard ERC20 implementations.
+**Flow Action**
+A type of Trigger action that enables multi-step workflows with conditional branching. Used to create complex user journeys that combine multiple blockchain operations.
 
-## Factory
+## M
 
-A smart contract that deploys a unique smart contract for any ERC20/ERC20 trading pair.
+**Metadata**
+A structured JSON (or TypeScript) object that defines a Trigger dApp's behavior, actions, and user interactions. It includes app metadata (URL, icon, title), chain configuration, and a list of available actions. Must be validated using the SDK's validation functions.
 
-## Flash Swap
+## P
 
-A trade that uses the tokens purchased before paying for them.
+**Parameter**
+A configurable input field that defines what information users need to provide to execute an action. Parameters can be of different types (address, string, number, select, radio) and include validation rules.
 
-## Invariant
+## S
 
-The “k” value in the constant product formula X\*Y=K
+**Sherry**
+A Web3 developer ecosystem and platform designed to make Trigger dApps easy to create, deploy, and use directly within social media feeds. Consists of several components:
+- **Sherry Labs**: The company developing the Trigger Protocol
+- **Trigger Protocol**: The developer toolkit and infrastructure
+- **Sherry Studio**: Platform for creating Triggers (TBA)
+- **Sherry Marketplace**: Web interface for Trigger interactions (TBA)
+- **Sherry Extension**: Browser extension for social media integration (TBA)
 
-## Liquidity Provider / "LP"
+## T
 
-A liquidity provider is someone who deposits ERC20 tokens into a given liquidity pool. Liquidity providers take on price risk and are compensated with trading fees.
+**Transfer Action**
+A type of Trigger action designed for native token transfers (e.g., AVAX, ETH, CELO). Uses configuration objects for amount and recipient instead of parameters, with built-in UI components.
 
-## Liquidity
+**Trigger dApp**
+A modular, metadata-defined mini-application that enables Web3 interactions. Triggers are portable, composable, and executable across different environments (wallets, browser extensions, social platforms) without requiring custom frontend implementation.
 
-Digital assets that are stored in a Uniswap pool contract, and are able to be traded against by traders.
+**Trigger Protocol**
+The comprehensive developer toolkit and infrastructure for creating, deploying, and interacting with Trigger dApps. Includes tools like the TriggerSDK, Debugger, and Chat interface for development.
 
-## Mid Price
+## V
 
-The price between the available buy and sell prices. In Uniswap v1 and v2, this is the ratio of the two ERC20 token reserves. In V3, this is the ratio of the two ERC20 token reserves available within the current active tick.
+**ValidatedMetadata**
+The processed and validated version of a Trigger dApp's metadata, returned by the `createMetadata` function. Includes additional processed information and ensures the metadata is correctly structured for reliable execution.
 
-## Observation
+**ValidationResult**
+The output of the `validateMetadata` function, indicating whether the metadata is valid and providing detailed error information if validation fails. Includes the path to any errors and descriptive messages.
 
-An instance of historical price and liquidity data of a given pair.
 
-## Pair
-
-A smart contract deployed from a Uniswap v1 or v2 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in v3.
-
-## Periphery
-
-External smart contracts that are useful, but not required for Uniswap to exist. New periphery contracts can always be deployed without migrating liquidity.
-
-## Pool
-
-A contract deployed by the V3 factory that pairs two ERC-20 assets. Different pools may have different fees despite containing the same token pair. Pools were previously called Pairs before the introduction of multiple fee options.
-
-## Position
-
-An instance of liquidity defined by upper and lower tick. And the amount of liquidity contained therein.
-
-## Price Impact
-
-The difference between the mid-price and the execution price of a trade.
-
-## Protocol Fees
-
-Fees that are rewarded to the protocol itself, rather than to liquidity providers.
-
-## Range
-
-Any interval between two ticks of any distance.
-
-## Range Order
-
-An approximation of a limit order, in which a single asset is provided as liquidity across a specified range, and is continuously swapped to the destination address as the spot price crosses the range.
-
-## Reserves
-
-The liquidity available within a pair. This was more commonly referenced before concentrated liquidity was introduced.
-
-## Slippage
-
-The amount the price moves in a trading pair between when a transaction is submitted and when it is executed.
-
-## Spot Price
-
-The current price of a token relative to another within a given pair.
-
-## Swap Fees
-
-The fees collected upon swapping which are rewarded to liquidity providers.
-
-## Tick Interval
-
-The price space between two nearest ticks.
-
-## Tick
-
-The boundaries between discrete areas in price space.

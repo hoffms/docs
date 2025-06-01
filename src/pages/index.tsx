@@ -462,7 +462,7 @@ export default function Home() {
             section={SectionName.BOTTOM_MENU_LINKS}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://discord.gg/ybKVQUWb4s'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/sherry'}>
               <CenterCard>
                 <StyledIcon>
                   <Discord style={{ width: '48px', height: '48px' }} />
