@@ -2,10 +2,10 @@ import './styles.module.css'
 
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styled from '@emotion/styled'
 import Discord from '@site/static/img/discord.svg'
 import GitHub from '@site/static/img/github.svg'
-import UGP from '@site/static/img/UGP.png'
 import MinithonImage from '@site/static/img/minithon.png'
 import Layout from '@theme/Layout'
 import ThemedImage from '@theme/ThemedImage'
@@ -292,8 +292,13 @@ const StyledIcon = styled.div`
 `
 
 export default function Home() {
+  const { siteConfig } = useDocusaurusContext()
   return (
-    <Layout title={`Sherry Docs`} description="Technical Documentation For Sherry and the Trigger Protocol">
+    <Layout
+      title="Sherry Docs"
+      description="Technical Documentation For Sherry and the Trigger Protocol"
+      image={siteConfig.themeConfig.image as string}
+    >
       <Container>
         <DocsHeader>
           <div
@@ -531,7 +536,7 @@ export default function Home() {
             <div>
               <h2 style={{ marginBottom: '0.5rem' }}>Open Minithon</h2>
               <p style={{ margin: '0rem' }}>
-              Join Sherry in the first ever Minithon: A 10-day async hackathon where you build with the TriggerKit.
+                Join Sherry in the first ever Minithon: A 10-day async hackathon where you build with the TriggerKit.
               </p>
             </div>
           </WideCard>
