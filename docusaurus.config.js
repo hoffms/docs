@@ -15,11 +15,13 @@ module.exports = {
   tagline: 'Documentation and Guides',
   url: 'https://docs.sherry.social',
   baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/sherry-favicon.png',
-  organizationName: 'Sherry Labs', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'hoffms', // GitHub org/user name
+  projectName: 'docs', // GitHub repo name
+  deploymentBranch: 'gh-pages',
   themeConfig: {
     image: 'img/twitter_card_bg.jpg',
     prism: {
