@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 import Discord from '@site/static/img/discord.svg'
 import GitHub from '@site/static/img/github.svg'
 import UGP from '@site/static/img/UGP.png'
+import MinithonImage from '@site/static/img/minithon.png'
 import Layout from '@theme/Layout'
 import ThemedImage from '@theme/ThemedImage'
 import { TraceEvent } from '@uniswap/analytics'
@@ -22,44 +23,44 @@ import SearchBarWithAnalytics from '../theme/SearchBar'
 
 export const actions = [
   {
-    title: 'What is Uniswap',
+    title: 'What is Sherry',
     icon: Info,
     to: '/concepts/overview',
-    text: `Learn about the core concepts of the Uniswap Protocol, Swaps, Pools, Concentrated Liquidity and more.`,
+    text: `Learn about Sherry and the core concepts of The Trigger Protocol.`,
   },
   {
-    title: 'Integrate with Uniswap',
+    title: 'Create a Trigger dApp',
     icon: HelpCircle,
-    to: '/sdk/v4/overview',
-    text: `Learn how to integrate with Uniswap by building a dApp through guided examples.`,
+    to: '/sdk/trigger-sdk/overview',
+    text: `Learn with guided examples how to create your dApp with Trigger SDK, debug and publish it.`,
   },
   {
-    title: 'The Uniswap smart contracts',
+    title: 'Integrate Trigger dApps',
     icon: BookOpen,
-    to: '/contracts/v4/overview',
-    text: `Learn about the architecture of the Uniswap Protocol smart contracts through guided examples.`,
+    to: '/sdk/trigger-sdk/overview',
+    text: `Learn how to integrate Trigger dApps into your social media, wallet, platforms and more.`,
   },
 ]
 
 export const developerLinks = [
   {
-    title: 'uniswap-v4-core',
-    href: 'https://github.com/Uniswap/v4-core/',
+    title: 'trigger-sdk',
+    href: 'https://github.com/SherryLabs/sherry-sdk',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v4-periphery',
-    href: 'https://github.com/Uniswap/v4-periphery',
+    title: 'sherry-contracts',
+    href: 'https://github.com/SherryLabs/sherry-contracts',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v4-sdk',
-    href: 'https://github.com/Uniswap/sdks/tree/main/sdks/v4-sdk',
+    title: 'poap-trigger-example',
+    href: 'https://github.com/SherryLabs/sherry-denver-quest',
     icon: GitHub,
   },
   {
-    title: 'Deployment addresses',
-    href: '/contracts/v4/deployments',
+    title: 'Dinamic Action example',
+    href: 'https://github.com/SherryLabs/sherry-example',
     icon: GitHub,
   },
 ]
@@ -292,7 +293,7 @@ const StyledIcon = styled.div`
 
 export default function Home() {
   return (
-    <Layout title={`Uniswap Docs`} description="Technical Documentation For The Uniswap Protocol">
+    <Layout title={`Sherry Docs`} description="Technical Documentation For Sherry and the Trigger Protocol">
       <Container>
         <DocsHeader>
           <div
@@ -304,15 +305,15 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <h1 style={{ fontWeight: 600 }}> Welcome to Uniswap Docs</h1>
+            <h1 style={{ fontWeight: 600 }}> Welcome to Sherry Docs</h1>
             <HideMedium>
               <SearchBarWithAnalytics />
             </HideMedium>
           </div>
           <StyledTitleImage
             sources={{
-              light: useBaseUrl('/img/grow.png'),
-              dark: useBaseUrl('/img/grow2.png'),
+              light: useBaseUrl('/img/bpurple.png'),
+              dark: useBaseUrl('/img/bpurple.png'),
             }}
           />
           <Row>
@@ -380,8 +381,8 @@ export default function Home() {
             </div>
           </div> */}
           <div>
-            <h2>Integrate your smart contracts</h2>
-            <p>Explore these guided tutorials to get started integrating with Uniswap in your smart contracts.</p>
+            <h2>Create a Trigger dApp</h2>
+            <p>Explore these guided tutorials to get started with the Trigger SDK and actions.</p>
             <div>
               {smartContractGuides.map((action) => (
                 <TraceEvent
@@ -419,8 +420,8 @@ export default function Home() {
           <StyledImage
             style={{ maxHeight: '400px' }}
             sources={{
-              light: useBaseUrl('/img/use.png'),
-              dark: useBaseUrl('/img/use2.png'),
+              light: useBaseUrl('/img/girl.png'),
+              dark: useBaseUrl('/img/girl.png'),
             }}
           />
           <div>
@@ -480,12 +481,12 @@ export default function Home() {
             section={SectionName.BOTTOM_MENU_LINKS}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://gov.uniswap.org/'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://x.com/sherryprotocol'}>
               <CenterCard>
                 <MessageCircle style={{ width: '48px', height: '48px' }} />
                 <div>
-                  <h3>Forum</h3>
-                  <p>Discuss governance and more.</p>
+                  <h3>X feed</h3>
+                  <p>Keep up to date with the latest news and updates.</p>
                 </div>
               </CenterCard>
             </Link>
@@ -496,14 +497,14 @@ export default function Home() {
             element={ElementName.GITHUB}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Uniswap'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://github.com/SherryLabs'}>
               <CenterCard>
                 <StyledIcon>
                   <GitHub style={{ width: '48px', height: '48px' }} />
                 </StyledIcon>
                 <div>
                   <h3>GitHub</h3>
-                  <p>View all Uniswap repositories.</p>
+                  <p>View all Sherry repositories.</p>
                 </div>
               </CenterCard>
             </Link>
@@ -516,7 +517,7 @@ export default function Home() {
             margin: '0 auto 4rem auto',
             width: '100%',
           }}
-          href={'https://uniswapfoundation.org/'}
+          href={'https://sherry.social/minithon'}
         >
           <WideCard
             style={{
@@ -526,12 +527,11 @@ export default function Home() {
               gap: '24px',
             }}
           >
-            <img src={UGP} width={'120px'} />
+            <img src={MinithonImage} width={'200px'} />
             <div>
-              <h2 style={{ marginBottom: '0.5rem' }}>Uniswap Foundation</h2>
+              <h2 style={{ marginBottom: '0.5rem' }}>Open Minithon</h2>
               <p style={{ margin: '0rem' }}>
-                In pursuit of a more open and fair financial system, the Uniswap Foundation supports the growth,
-                decentralization, and sustainability of the Uniswap community.{' '}
+              Join Sherry in the first ever Minithon: A 10-day async hackathon where you build with the TriggerKit.
               </p>
             </div>
           </WideCard>
