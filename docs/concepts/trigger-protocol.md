@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## Introduction
 
-In the context of the Sherry ecosystem and Web3 development, "triggers" refer to modular, metadata-defined actions or mini-applications (Trigger dApps or ggApps) that users can activate or interact with, typically embedded within social media feeds or Web3 interfaces. These triggers enable users to perform blockchain-related operations—such as staking, minting NFTs, token transfers, or accessing gated content—through simple, interactive elements that "trigger" on-chain transactions or workflows.
+In the context of the Sherry ecosystem and Web3 development, "triggers" refer to modular, metadata-defined actions or mini-applications (Trigger dApps) that users can activate or interact with, typically embedded within social media feeds or Web3 interfaces. These triggers enable users to perform blockchain-related operations—such as staking, minting NFTs, token transfers, or accessing gated content—through simple, interactive elements that "trigger" on-chain transactions or workflows.
 
 ### Key Features
 
