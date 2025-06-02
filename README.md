@@ -1,14 +1,14 @@
-# Uniswap Documentation
+# Sherry Documentation
 
-This web application contains all documentation for Uniswap products. It is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+This web application contains all documentation for Sherry products. It is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
 # Project Layout
 
-### Uniswap documentation is broken down into four sections:
-- Concepts - General Uniswap information or concepts useful for using Uniswap products, such as *Hooks* and *Fees*
-- Contracts - Uniswap smart contracts including *v4*, *v3*, *UniswapX*, *Universal Router*, *Permit2*, *v2*, and *v1*
-- SDKs - Uniswap integrations such as the *v4-sdk*, *v3-sdk* and the *Swap Widget*
-- APIs - The Uniswap APIs such the *Subgraph API*
+### Sherry documentation is broken down into four sections:
+- Concepts - General Sherry information or concepts useful for using Sherry products, such as *Triggers* and *Actions*
+- Contracts - Sherry smart contracts used for integrations
+- SDKs - Sherry Trigger development kit such as the *TriggerSDK* and *TriggerKit*.
+- APIs - The Sherry APIs such the *Actions API*
 
 ### Each item in a section should include the following:
 - *Overview*
@@ -26,7 +26,7 @@ A product overview should address points such as:
 - Where does the source code of the product live?
 - Where does the code artifact live (eg *npm*) and how does someone integrate with it?
 
-A good example is the [v4 Smart Contracts](./docs/contracts/v4/overview).
+A good example is the Uniswap [v4 Smart Contracts](https://docs.uniswap.org/docs/contracts/v4/overview).
 
 ### Guides
 > Guides should follow the **Principles of a Good Guide**:
@@ -47,13 +47,13 @@ A good example is the [v4 Smart Contracts](./docs/contracts/v4/overview).
 By implementing these consistent principles Uniswap will have docs that are easy to understand and produce reusable code for its community.
 
 
-A good example is the [v3 SDK Guides](./docs/sdk/v3/guides/01-background.md).
+A good example is the Uniswap [v3 SDK Guides](https://docs.uniswap.org/docs/sdk/v3/guides/01-background.md).
 
 ### Technical References
-This should contain the technical reference for the exported interfaces. A good example is the [v4 SDK](./docs/sdk/v4/overview).
+This should contain the technical reference for the exported interfaces. A good example is the Uniswap [v4 SDK](https://docs.uniswap.org/docs/sdk/v4/overview).
 These files can be created using the [guides below](#how-to-create-a-technical-reference).
 
-# Contributing to Uniswap Docs
+# Contributing to Sherry Docs
 
 ## Guidelines
 Contributing to the docs site is a great way to get involved in the dev community and help other developers along the way! Check out our guidelines [here](./CONTRIBUTING.md).

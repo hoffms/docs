@@ -11,15 +11,15 @@ module.exports = {
     // From node
     nodeEnv: process.env.NODE_ENV,
   },
-  title: 'Uniswap',
+  title: 'Sherry',
   tagline: 'Documentation and Guides',
-  url: 'https://docs.uniswap.org',
+  url: 'https://docs.sherry.social',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'ignore',
-  favicon: 'img/favicon.png',
-  organizationName: 'Uniswap', // Usually your GitHub org/user name.
-  projectName: 'Uniswap-docs', // Usually your repo name.
+  favicon: 'img/sherry-favicon.png',
+  organizationName: 'Sherry Labs', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
   themeConfig: {
     image: 'img/twitter_card_bg.jpg',
     prism: {
@@ -33,7 +33,7 @@ module.exports = {
     navbar: {
       title: '',
       logo: {
-        alt: 'Uniswap Unicorn',
+        alt: 'Sherry Logo',
         src: 'img/sherry_black_logo.svg',
         srcDark: 'img/sherry_white_logo.svg',
       },
@@ -98,11 +98,11 @@ module.exports = {
             },
             {
               label: 'Bug Bounty',
-              href: 'https://blog.uniswap.org/v4-bug-bounty',
+              href: 'https://sherry.social/bug-bounty',
             },
             {
               label: 'Whitepaper',
-              href: 'https://app.uniswap.org/whitepaper-v4.pdf',
+              href: 'https://sherry.social/whitepaper.pdf',
             },
           ],
         },
@@ -110,16 +110,16 @@ module.exports = {
           title: 'GitHub',
           items: [
             {
-              label: 'uniswap-v4-core',
-              href: 'https://github.com/Uniswap/v4-core',
+              label: 'sherry-core',
+              href: 'https://github.com/sherrylabs/core',
             },
             {
-              label: 'uniswap-v4-sdk',
-              href: 'https://github.com/Uniswap/sdks/tree/main/sdks/v4-sdk',
+              label: 'sherry-sdk',
+              href: 'https://github.com/sherrylabs/sdk',
             },
             {
-              label: 'uniswap-v4-periphery',
-              href: 'https://github.com/Uniswap/v4-periphery',
+              label: 'sherry-periphery',
+              href: 'https://github.com/sherrylabs/periphery',
             },
             {
               label: 'Deployment addresses',
@@ -132,19 +132,19 @@ module.exports = {
           items: [
             {
               label: 'App',
-              href: 'https://app.uniswap.org/',
+              href: 'https://app.sherry.social/',
             },
             {
               label: 'Analytics',
-              href: 'https://info.uniswap.org/home',
+              href: 'https://analytics.sherry.social/',
             },
             {
               label: 'Token Lists',
-              href: 'https://tokenlists.org/',
+              href: 'https://tokenlists.sherry.social/',
             },
             {
               label: 'Brand Assets',
-              href: 'https://github.com/Uniswap/brand-assets/raw/main/Uniswap%20Brand%20Assets.zip',
+              href: 'https://github.com/sherrylabs/brand-assets',
             },
           ],
         },
@@ -153,19 +153,19 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              href: 'https://blog.uniswap.org/',
+              href: 'https://blog.sherry.social/',
             },
             {
               label: 'Governance',
-              href: 'https://gov.uniswap.org/',
+              href: 'https://gov.sherry.social/',
             },
             {
-              label: 'Uniswap Labs Twitter',
-              href: 'https://twitter.com/Uniswap',
+              label: 'Sherry Labs Twitter',
+              href: 'https://twitter.com/sherrylabs',
             },
             {
-              label: 'Uniswap Foundation Twitter',
-              href: 'https://x.com/UniswapFND',
+              label: 'Sherry Foundation Twitter',
+              href: 'https://x.com/sherryfnd',
             },
           ],
         },
