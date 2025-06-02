@@ -18,12 +18,12 @@ module.exports = {
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'ignore',
-  favicon: 'img/sherry-favicon.png',
+  favicon: '/docs/img/sherry-favicon.png',
   organizationName: 'hoffms', // GitHub org/user name
   projectName: 'docs', // GitHub repo name
   deploymentBranch: 'gh-pages',
   themeConfig: {
-    image: 'img/twitter_card_bg.jpg',
+    image: '/docs/img/twitter_card_bg.jpg',
     prism: {
       additionalLanguages: ['solidity'],
     },
@@ -36,8 +36,8 @@ module.exports = {
       title: '',
       logo: {
         alt: 'Sherry Logo',
-        src: 'img/sherry_black_logo.svg',
-        srcDark: 'img/sherry_white_logo.svg',
+        src: '/docs/img/sherry_black_logo.svg',
+        srcDark: '/docs/img/sherry_white_logo.svg',
       },
       items: [
         {
