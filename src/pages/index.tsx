@@ -312,8 +312,8 @@ export default function Home() {
           </div>
           <StyledTitleImage
             sources={{
-              light: useBaseUrl('/docs/img/bpurple.png'),
-              dark: useBaseUrl('/docs/img/bpurple.png'),
+              light: useBaseUrl('/img/bpurple.png'),
+              dark: useBaseUrl('/img/bpurple.png'),
             }}
           />
           <Row>
@@ -417,11 +417,11 @@ export default function Home() {
             alignItems: 'center',
           }}
         >
-          <ThemedImage
-            alt="Girl"
+          <StyledImage
+            style={{ maxHeight: '400px' }}
             sources={{
-              light: useBaseUrl('/docs/img/girl.png'),
-              dark: useBaseUrl('/docs/img/girl.png'),
+              light: useBaseUrl('/img/girl.png'),
+              dark: useBaseUrl('/img/girl.png'),
             }}
           />
           <div>
