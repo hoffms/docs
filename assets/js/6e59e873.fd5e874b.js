@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_uniswap_docs=self.webpackChunk_uniswap_docs||[]).push([[68695],{74533:e=>{e.exports=JSON.parse('{"permalink":"/docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Engineering Blog"}')}}]);
