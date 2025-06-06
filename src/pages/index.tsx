@@ -69,27 +69,22 @@ export const dAppGuides = [
   {
     title: 'Fetch token prices',
     text: 'Fetch the price of tokens in a specific Pool',
-    to: 'sdk/v3/guides/swaps/quoting',
+    to: '/sdk/trigger-sdk/guides/swaps/quoting',
   },
   {
     title: 'Create a Trade',
     text: 'Fetch a Quote for a Trade and execute the Trade',
-    to: '/sdk/v3/guides/swaps/trading',
+    to: '/sdk/trigger-sdk/guides/swaps/trading',
   },
   {
     title: 'Route trades',
     text: 'Use Routing to get optimized prices for your Trades',
-    to: '/sdk/v3/guides/swaps/routing',
+    to: '/sdk/trigger-sdk/guides/swaps/routing',
   },
   {
     title: 'Provide liquidity',
     text: "Contribute to a Pool's liquidity by using tokens to earn fees",
-    to: '/sdk/v3/guides/liquidity/minting',
-  },
-  {
-    title: 'UI Component',
-    text: 'Integrate with the Swap Widget, a React component that works out of the box ',
-    to: '/sdk/swap-widget/overview',
+    to: '/sdk/trigger-sdk/guides/liquidity/minting',
   },
 ]
 export const smartContractGuides = [

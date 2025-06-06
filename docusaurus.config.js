@@ -196,7 +196,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          editUrl: 'https://github.com/uniswap/uniswap-docs/tree/main/',
+          editUrl: 'https://github.com/hoffms/docs/tree/main/',
           includeCurrentVersion: true,
         },
         blog: {
@@ -227,28 +227,19 @@ module.exports = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          {
-            to: '/sdk/v3/guides/background',
-            from: '/sdk/v3/guides/quick-start',
-          },
-          {
-            to: '/sdk/v3/guides/swaps/quoting',
-            from: ['/sdk/v3/guides/creating-a-pool', '/sdk/v3/guides/fetching-prices'],
-          },
-          {
-            to: '/sdk/v3/guides/swaps/trading',
-            from: ['/sdk/v3/guides/creating-a-trade', '/sdk/guides/creating-a-trade'],
-          },
-          {
-            to: '/sdk/v3/guides/swaps/routing',
-            from: '/sdk/v3/guides/auto-router',
-          },
-          {
-            to: '/sdk/v3/guides/liquidity/modifying-position',
-            from: ['/sdk/v3/guides/liquidity/adding', '/sdk/v3/guides/liquidity/removing'],
-          }
+          // Removed SDK v3 redirects as they are no longer needed
         ],
       },
     ],
   ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
+  },
 }

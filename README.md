@@ -34,7 +34,7 @@ A good example is the Uniswap [v4 Smart Contracts](https://docs.uniswap.org/docs
 - Guides have three parts:
     1. An **introduction** that explains the concept that the piece of code implements and a summary of what the guide will cover and result in.
     2. A step-by-step **walkthrough** of each line of the example code 
-    3. An **output** or end state that users can test against what they’re seeing to know if they implemented correctly
+    3. An **output** or end state that users can test against what they're seeing to know if they implemented correctly
 - Guides do not show source code snippets that should not be included in the example (IE using snippets from a source contract to explain how to integrate with it). If a guide needs to reference an external piece of code it should link to the source code or technical reference.
 - We keep Links and References ***only at the bottom*** of pages and reference them using footnotes to **keep distractions at a minimum**
 - Our goal is to have the developer build something within **10 minutes per guide** but also provide the option for a deep dive by providing references to extra content.
@@ -47,7 +47,7 @@ A good example is the Uniswap [v4 Smart Contracts](https://docs.uniswap.org/docs
 By implementing these consistent principles Uniswap will have docs that are easy to understand and produce reusable code for its community.
 
 
-A good example is the Uniswap [v3 SDK Guides](https://docs.uniswap.org/docs/sdk/v3/guides/01-background.md).
+A good example is the Sherry [Trigger SDK Guides](/sdk/trigger-sdk/overview).
 
 ### Technical References
 This should contain the technical reference for the exported interfaces. A good example is the Uniswap [v4 SDK](https://docs.uniswap.org/docs/sdk/v4/overview).
@@ -72,19 +72,19 @@ Contributing to the docs site is a great way to get involved in the dev communit
 
 ## Checklist example
 
-Let's walk through an example by considering the *Permit2* smart contract:
+Let's walk through an example by considering the *Trigger Protocol* smart contract:
 -  Did I pick the right section for the product? 
     - In this case, [contracts](./docs/contracts/) 
 - Did I create the product folder? 
-    - In this case, [yes](./docs/contracts/permit2/)
+    - In this case, [yes](./docs/contracts/v4/)
 - Did I introduce any new concepts? 
     - No
-- Did I include an Overview of the product under */contracts/permit2/overview* ?
-    - Yes, I did add them [here](./docs/contracts/permit2/overview.md)
-- Did I include Guides of the product under *contracts/permit2/guides* ?
-    - No, they should be added [here](./docs/contracts/permit2/guides)
-- Did I include Technical Reference of the product under *contracts/permit2/reference* ?
-    - Yes I added them [here](./docs/contracts/permit2/reference)
+- Did I include an Overview of the product under */contracts/v4/overview* ?
+    - Yes, I did add them [here](./docs/contracts/v4/overview.md)
+- Did I include Guides of the product under *contracts/v4/guides* ?
+    - No, they should be added [here](./docs/contracts/v4/guides)
+- Did I include Technical Reference of the product under *contracts/v4/reference* ?
+    - Yes I added them [here](./docs/contracts/v4/reference)
 - Did I open a PR using the the [Contributing](./CONTRIBUTING.md) guidelines?
     - Yes
 - Did I update the search indices after my change was deployed?

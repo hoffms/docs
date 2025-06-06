@@ -42,7 +42,7 @@ The command types that are not defined do not have an assigned command at this m
 
 ## v2 vs v1 Overview
 
-**Note:** For details on the previous version, see [Universal Router (Legacy)](../../universal-router-legacy/overview).
+The Universal Router v2 introduces several improvements over v1:
 
 | Feature                   | v1                        | v2                                       |
 | ------------------------- | ------------------------- | ---------------------------------------- |
@@ -52,6 +52,8 @@ The command types that are not defined do not have an assigned command at this m
 | Commands                  | 0x00–0x3f (dense NFT ops) | 0x00–0x21 (compact core logic)           |
 | Permit2-based transfers   | ✅                        | ✅ Extended with batch & position flows  |
 | Sub-plan execution        | ✅ `EXECUTE_SUB_PLAN`     | ✅ Still supported                       |
+
+For historical reference, v1 documentation has been archived.
 
 ## Supported Commands (v2)
 
@@ -328,7 +330,7 @@ V4SwapRouter.\_handleAction(action, params)
 - `uint8 v, bytes32 r, bytes32 s`
 
 **Calls:** NonfungiblePositionManager.permit(...)  
-**Usage:** Grants router permission to operate on a user’s v3 NFT.
+**Usage:** Grants router permission to operate on a user's v3 NFT.
 
 ---
 
@@ -393,8 +395,3 @@ Be sure to follow such commands with cleanup logic (e.g., `SWEEP`) to handle unu
 
 - [Uniswap Universal Router GitHub](https://github.com/Uniswap/universal-router)
 - [Latest Commands.sol](https://github.com/Uniswap/universal-router/blob/main/contracts/libraries/Commands.sol)
-
-## Legacy Documentation
-
-- [Universal Router (Legacy) Overview](../../universal-router-legacy/overview)
-- [Universal Router (Legacy) Technical Reference](../../universal-router-legacy/technical-reference)
