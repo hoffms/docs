@@ -27,12 +27,6 @@ The root object that defines a Trigger. It includes:
 - **Chain Configuration**: 
   - `chains.source`: Required. The source chain for the action
   - `chains.destination`: Optional. The destination chain for cross-chain actions
-  - Supported chains:
-    - `ethereum`: Ethereum Mainnet
-    - `avalanche`: Avalanche C-Chain
-    - `fuji`: Avalanche Fuji Testnet
-    - `celo`: Celo Mainnet
-    - `alfajores`: Celo Alfajores Testnet
 - **List of Actions**: The user can execute
 - **BaseUrl**: (optional) Required for dynamic actions with relative paths
 
@@ -105,7 +99,7 @@ const metadata: Metadata = {
 ```
 
 :::note UI Preview
-![Bridge to Avalanche UI](./images/bridge-to-avax-ui.png)
+[Bridge to Avalanche UI - A simple interface showing token selection and amount input for bridging assets to Avalanche]
 :::
 
 ### Simple Token Transfer
