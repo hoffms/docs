@@ -440,6 +440,10 @@ html[data-theme='dark'] .DocSearch-Hit a {
 }
 
 .navbar__item {
+  display: inline-block;
+}
+
+.navbar__item.hidden {
   display: none;
 }
 
