@@ -33,9 +33,11 @@ const getSelectedDocVersion = (docVersion: string) => {
     case ProtocolVersion.V2:
     case '2.0.0':
       return ProtocolVersion.V2
-    // Default to the current doc version
-    default:
+    case ProtocolVersion.V3:
+    case '3.0.0':
       return ProtocolVersion.V3
+    default:
+      return ProtocolVersion.V2
   }
 }
 

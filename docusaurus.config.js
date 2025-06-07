@@ -29,7 +29,7 @@ module.exports = {
     },
     algolia: {
       apiKey: '32465e2ab6f7554ff014e64c0d92171c',
-      indexName: 'v3-docs',
+      indexName: 'sherry-docs',
       appId: 'S0IDD0YGLZ',
     },
     navbar: {
@@ -44,25 +44,21 @@ module.exports = {
           to: '/concepts/overview',
           label: 'Concepts',
           position: 'left',
-          className: 'V3_active',
         },
         {
-          to: '/contracts/v4/overview',
+          to: '/contracts/overview',
           label: 'Contracts',
           position: 'left',
-          className: 'V3_active',
         },
         {
           to: '/sdk/trigger-sdk/overview',
           label: 'SDKs',
           position: 'left',
-          className: 'V3_active',
         },
         {
           to: '/api/overview',
           label: 'APIs',
           position: 'left',
-          className: 'V3_active',
         },
         {
           label: 'Minithon',
@@ -78,7 +74,7 @@ module.exports = {
         },
         {
           label: 'GitHub',
-          to: 'https://github.com/sherrylabs/',
+          to: 'https://github.com/SherryLabs/',
           position: 'right',
           className: 'persistent',
         },
@@ -94,38 +90,26 @@ module.exports = {
               label: 'Dev Chat',
               href: 'https://discord.com/invite/sherry',
             },
-            {
-              label: 'Feedback',
-              href: 'https://forms.gle/13XtjmkwdXQ2jMn26',
-            },
-            {
-              label: 'Bug Bounty',
-              href: 'https://sherry.social/bug-bounty',
-            },
-            {
-              label: 'Whitepaper',
-              href: 'https://sherry.social/whitepaper.pdf',
-            },
           ],
         },
         {
           title: 'GitHub',
           items: [
             {
-              label: 'sherry-core',
-              href: 'https://github.com/sherrylabs/core',
-            },
-            {
               label: 'sherry-sdk',
-              href: 'https://github.com/sherrylabs/sdk',
+              href: 'https://github.com/SherryLabs/sherry-sdk',
             },
             {
-              label: 'sherry-periphery',
-              href: 'https://github.com/sherrylabs/periphery',
+              label: 'sherry-contracts',
+              href: 'https://github.com/SherryLabs/sherry-contracts',
             },
             {
-              label: 'Deployment addresses',
-              href: '/contracts/v4/deployments',
+              label: 'sherrylinks-examples',
+              href: 'https://github.com/SherryLabs/sherrylinks-examples',
+            },
+            {
+              label: 'sherry-example',
+              href: 'https://github.com/SherryLabs/sherry-example',
             },
           ],
         },
@@ -136,18 +120,6 @@ module.exports = {
               label: 'App',
               href: 'https://app.sherry.social/',
             },
-            {
-              label: 'Analytics',
-              href: 'https://analytics.sherry.social/',
-            },
-            {
-              label: 'Token Lists',
-              href: 'https://tokenlists.sherry.social/',
-            },
-            {
-              label: 'Brand Assets',
-              href: 'https://github.com/sherrylabs/brand-assets',
-            },
           ],
         },
         {
@@ -155,19 +127,15 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              href: 'https://blog.sherry.social/',
+              href: 'https://medium.com/@sherry.social',
             },
             {
-              label: 'Governance',
-              href: 'https://gov.sherry.social/',
+              label: 'X (Twitter)',
+              href: 'https://x.com/SherryProtocol',
             },
             {
-              label: 'Sherry Labs Twitter',
-              href: 'https://twitter.com/sherrylabs',
-            },
-            {
-              label: 'Sherry Foundation Twitter',
-              href: 'https://x.com/sherryfnd',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/sherrylabs',
             },
           ],
         },

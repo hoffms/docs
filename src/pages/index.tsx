@@ -87,31 +87,39 @@ export const dAppGuides = [
     to: '/sdk/trigger-sdk/guides/liquidity/minting',
   },
 ]
-export const smartContractGuides = [
+export const sherryGuides = [
   {
-    title: 'Setup your environment',
-    text: 'Prepare your local environment by installing the required dependencies',
-    to: '/contracts/v4/quickstart/hooks/setup',
+    title: 'Quick Start',
+    text: 'Get up and running with Sherry SDK in minutes - create your first mini-app and validate your setup',
+    to: '/sdk/trigger-sdk-2/quickstart',
   },
   {
-    title: 'Implement a Swap',
-    text: 'Start swapping from a smart contract in Solidity',
-    to: 'contracts/v4/quickstart/swap',
+    title: 'Build a Mini-App',
+    text: 'Learn how to create a complete mini-app with Next.js, from simple transfers to smart contract interactions',
+    to: '/sdk/trigger-sdk-2/guides/guide-en',
   },
   {
-    title: 'Provide Liquidity',
-    text: 'Provide liquidity from a smart contract in Solidity',
-    to: 'contracts/v4/quickstart/manage-liquidity/setup-liquidity',
+    title: 'Basic Mini-App Guide',
+    text: 'Create more complex mini-apps with multiple actions and user inputs',
+    to: '/sdk/trigger-sdk-2/guides/basic-mini-app',
   },
   {
-    title: 'Implement Flash Swaps',
-    text: 'Implement Flash Swaps from a smart contract in Solidity',
-    to: '/contracts/v4/guides/flash-accounting',
+    title: 'UI Integration',
+    text: 'Integrate TriggerKit into your React and Next.js applications with pre-built components',
+    to: '/sdk/trigger-kit/guides/trigger-ui',
   },
   {
-    title: 'Create a Hook',
-    text: 'Create your first hook to customize pool behavior in Solidity',
-    to: '/contracts/v4/guides/hooks/your-first-hook',
+    title: 'Examples & Templates',
+    text: 'Explore complete examples from beginner to advanced, including full application implementations',
+    to: '/sdk/trigger-sdk/examples/examples',
+  },
+]
+
+export const sherryTools = [
+  {
+    title: 'Debugger',
+    text: 'Test and validate your Trigger metadata with our visual debugging tool',
+    to: 'https://app.sherry.social/debugger',
   },
 ]
 
@@ -381,10 +389,39 @@ export default function Home() {
             </div>
           </div> */}
           <div>
-            <h2>Create a Trigger dApp</h2>
-            <p>Explore these guided tutorials to get started with the Trigger SDK and actions.</p>
+            <h2>Build with Sherry</h2>
+            <p>Follow these step-by-step guides to create powerful Triggers and integrate them into your applications.</p>
             <div>
-              {smartContractGuides.map((action) => (
+              {sherryGuides.map((action) => (
+                <TraceEvent
+                  key={action.to}
+                  element={action.to}
+                  events={[BrowserEvent.onClick]}
+                  name={SharedEventName.PAGE_CLICKED}
+                  section={SectionName.SMART_CONTRACT_LINKS}
+                >
+                  <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
+                    <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                      <LinkRow>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                          <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
+                        </div>
+                        <LinkIconWrapper>
+                          <LinkIcon />
+                        </LinkIconWrapper>
+                      </LinkRow>
+                      <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
+                    </Card>
+                  </Link>
+                </TraceEvent>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2>Developer Tools</h2>
+            <p>Use these tools to build and test your Trigger dApps.</p>
+            <div>
+              {sherryTools.map((action) => (
                 <TraceEvent
                   key={action.to}
                   element={action.to}

@@ -1,5 +1,5 @@
 {
-  "index_name": "v3-docs",
+  "index_name": "sherry-docs",
   "start_urls": ["https://docs.uniswap.org/"],
   "sitemap_urls": ["https://docs.uniswap.org/sitemap.xml"],
   "sitemap_alternate_links": true,
