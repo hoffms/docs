@@ -25,10 +25,10 @@ To begin, we should make clear the distinctions between the different areas of "
 
 ## Sherry's Community and Ecosystem
 
-Sherry's community is vibrant and growing. Engage with fellow Sherry enthusiasts on our Discord or our X. Developers can dive into our developer docs and explore our GitHub for integrations. Join Sherry's community and help shape the future of blockchain distribution!
+Sherry's community is vibrant and growing. Engage with fellow Sherry enthusiasts on our [Discord](https://discord.com/invite/sherry) or [X (Twitter)](https://x.com/SherryProtocol). Developers can dive into our [developer docs](/sdk/trigger-sdk/overview) and explore our [GitHub](https://github.com/SherryLabs/) for integrations. Join Sherry's community and help shape the future of blockchain distribution!
 
 
 
 Getting Started with Sherry
 
-New to Sherry? Dive in quickly with our quick start guide and tutorials. Visit our interface to swap tokens or explore our developer docs for integration details. 
+New to Sherry? Dive in quickly with our [quick start guide](/sdk/trigger-sdk/overview) and [tutorials](/sdk/trigger-sdk/guides). Visit our [interface](https://app.sherry.social/) to swap tokens or explore our [developer docs](/sdk/trigger-sdk/overview) for integration details. 
