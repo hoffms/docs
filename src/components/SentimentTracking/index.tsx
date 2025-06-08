@@ -1,108 +1,45 @@
+import React from 'react'
 import styled from '@emotion/styled'
-import { TraceEvent } from '@uniswap/analytics'
-import { BrowserEvent, DocsSentiment, DocsSentimentSection, SharedEventName } from '@uniswap/analytics-events'
-import React, { useCallback, useState } from 'react'
-import { Frown, Meh, Smile } from 'react-feather'
-
-import { colors } from '../../theme/color'
-import { Opacity } from '../../theme/style'
-
-enum Sentiment {
-  NEGATIVE = 'NEGATIVE',
-  NEUTRAL = 'NEUTRAL',
-  POSITIVE = 'POSITIVE',
-}
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  margin-left: 16px;
 `
 
-const PositiveSentimentIcon = styled(Smile)<{ selected: boolean }>`
-  fill: ${(props) => (props.selected ? colors.greenVibrant : 'transparent')};
-  opacity: ${(props) => (props.selected ? Opacity.FULL : Opacity.MEDIUM)};
+const Button = styled.button<{ isSelected: boolean }>`
+  background: ${({ isSelected }) => (isSelected ? 'var(--ifm-color-primary)' : 'transparent')};
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 16px;
+  color: ${({ isSelected }) => (isSelected ? 'white' : 'var(--ifm-color-primary)')};
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 12px;
+  transition: all 0.2s ease;
 
   &:hover {
-    fill: ${colors.greenVibrant};
+    background: var(--ifm-color-primary);
+    color: white;
   }
 `
 
-const NegativeSentimentIcon = styled(Frown)<{ selected: boolean }>`
-  fill: ${(props) => (props.selected ? colors.redVibrant : 'transparent')};
-  opacity: ${(props) => (props.selected ? Opacity.FULL : Opacity.MEDIUM)};
+export default function SentimentTracking() {
+  const [selectedSentiment, setSelectedSentiment] = React.useState<string | null>(null)
 
-  &:hover {
-    fill: ${colors.redVibrant};
+  const handleSentimentClick = (sentiment: string) => {
+    setSelectedSentiment(sentiment)
+    // You can add your own feedback collection logic here
   }
-`
-
-const NeutralSentimentIcon = styled(Meh)<{ selected: boolean }>`
-  fill: ${(props) => (props.selected ? colors.yellowVibrant : 'transparent')};
-  opacity: ${(props) => (props.selected ? Opacity.FULL : Opacity.MEDIUM)};
-  margin: 0 0.2rem;
-
-  &:hover {
-    fill: ${colors.yellowVibrant};
-  }
-`
-
-const StyledTextDiv = styled.div`
-  font-size: 1rem;
-  padding-right: 0.5rem;
-`
-
-export default function SentimentTracking({ analyticsSection }: { analyticsSection: DocsSentimentSection }) {
-  const [selectedSentiment, setSelectedSentiment] = useState<null | Sentiment>(null)
-
-  const isSentimentSelected = useCallback(
-    (sentiment: Sentiment) => selectedSentiment && selectedSentiment === sentiment,
-    [selectedSentiment]
-  )
 
   return (
     <Container>
-      <StyledTextDiv>Helpful?</StyledTextDiv>
-      <TraceEvent
-        element={DocsSentiment.POSITIVE_SENTIMENT}
-        name={SharedEventName.SENTIMENT_SUBMITTED}
-        events={[BrowserEvent.onClick]}
-        section={analyticsSection}
-      >
-        <PositiveSentimentIcon
-          selected={isSentimentSelected(Sentiment.POSITIVE)}
-          onClick={() => {
-            setSelectedSentiment(Sentiment.POSITIVE)
-          }}
-        />
-      </TraceEvent>
-      <TraceEvent
-        element={DocsSentiment.NEUTRAL_SENTIMENT}
-        name={SharedEventName.SENTIMENT_SUBMITTED}
-        events={[BrowserEvent.onClick]}
-        section={analyticsSection}
-      >
-        <NeutralSentimentIcon
-          selected={isSentimentSelected(Sentiment.NEUTRAL)}
-          onClick={() => {
-            setSelectedSentiment(Sentiment.NEUTRAL)
-          }}
-        />
-      </TraceEvent>
-      <TraceEvent
-        element={DocsSentiment.NEGATIVE_SENTIMENT}
-        name={SharedEventName.SENTIMENT_SUBMITTED}
-        events={[BrowserEvent.onClick]}
-        section={analyticsSection}
-      >
-        <NegativeSentimentIcon
-          selected={isSentimentSelected(Sentiment.NEGATIVE)}
-          onClick={() => {
-            setSelectedSentiment(Sentiment.NEGATIVE)
-          }}
-        />
-      </TraceEvent>
+      <Button isSelected={selectedSentiment === 'helpful'} onClick={() => handleSentimentClick('helpful')}>
+        Helpful
+      </Button>
+      <Button isSelected={selectedSentiment === 'not-helpful'} onClick={() => handleSentimentClick('not-helpful')}>
+        Not Helpful
+      </Button>
     </Container>
   )
 }

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import OriginalDocBreadcrumbs from '@theme-original/DocBreadcrumbs'
-import { DocsSentimentSection } from '@uniswap/analytics-events'
 import React from 'react'
 
 import SentimentTracking from '../components/SentimentTracking'
@@ -21,7 +20,7 @@ export default function DocBreadcrumbs(props) {
     <Container>
       <OriginalDocBreadcrumbs {...props} />
       <SentimentTrackingContainer>
-        <SentimentTracking analyticsSection={DocsSentimentSection.TOP_SECTION} />
+        <SentimentTracking />
       </SentimentTrackingContainer>
     </Container>
   )

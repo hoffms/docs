@@ -1,3 +1,19 @@
+#!/bin/bash
+
+# Generate Solidity documentation for Sherry Protocol
+# This script generates documentation for the Sherry smart contracts
+
+# Exit on error
+set -e
+
+# Clean up any existing docs
+rm -rf docs/contracts
+
+# Generate docs
+forge doc --build --out docs/contracts
+
+echo "Contract documentation generated successfully!"
+
 # Usage: ./scripts/v4-forge-doc.sh, called from the root directory
 # NOTE: This script appears to not work with WSL, and is intended to run on MacOS
 # NOTE: submodules should be updated outside of the script

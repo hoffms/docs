@@ -1,7 +1,7 @@
 {
-  "name": "@uniswap/docs",
-  "description": "Uniswap docs",
-  "license": "MIT",
+  "name": "sherry-docs",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "NODE_OPTIONS='--openssl-legacy-provider' docusaurus start",
@@ -16,32 +16,32 @@
     "lint": "yarn eslint src"
   },
   "dependencies": {
-    "@algolia/autocomplete-preset-algolia": "^1.1.0",
-    "@algolia/client-search": "^4.9.1",
-    "@babel/core": "^7.14.6",
-    "@docusaurus/core": "^2.0.0-beta.17",
-    "@docusaurus/plugin-client-redirects": "2.0.0-beta.17",
-    "@docusaurus/plugin-content-docs": "^2.0.0-beta.17",
-    "@docusaurus/preset-classic": "^2.0.0-beta.17",
-    "@docusaurus/remark-plugin-npm2yarn": "^2.0.0-beta.17",
-    "@docusaurus/theme-search-algolia": "^2.0.0-beta.17",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "@mdx-js/react": "^1.6.21",
-    "@saucelabs/theme-github-codeblock": "https://github.com/Uniswap/docusaurus-theme-github-codeblock.git#f55fe4caed9fce974c9b82bf2164f76cc5509eef",
-    "@types/react": "^17.0.11",
-    "@uniswap/analytics": "1.1.0",
-    "@uniswap/analytics-events": "2.0.0",
-    "algoliasearch": "^4.9.1",
-    "clsx": "^1.1.1",
-    "hast-util-is-element": "1.1.0",
-    "intl-locales-supported": "^1.8.12",
-    "react": "18",
-    "react-dom": "18",
+    "@docusaurus/core": "2.4.3",
+    "@docusaurus/preset-classic": "2.4.3",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mdx-js/react": "^1.6.22",
+    "@saucelabs/theme-github-codeblock": "0.0.6",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "clsx": "^1.2.1",
+    "docusaurus-plugin-sass": "^0.2.5",
+    "docusaurus-theme-github-codeblock": "^2.1.0",
+    "prism-react-renderer": "^1.3.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-feather": "^2.0.10",
-    "rehype-katex": "5",
-    "remark-math": "3",
-    "web-vitals": "2.1.0"
+    "sass": "^1.71.1",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.4.3",
+    "@tsconfig/docusaurus": "^1.0.6",
+    "@types/node": "^20.11.19",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5"
   },
   "browserslist": {
     "production": [
@@ -55,32 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.1.0",
-    "@tsconfig/docusaurus": "^1.0.6",
-    "@types/gtag.js": "^0.0.20",
-    "@typescript-eslint/eslint-plugin": "^4",
-    "@typescript-eslint/parser": "^4",
-    "dotenv": "^16.0.3",
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-markdown": "^3.0.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-typescript-sort-keys": "^2.1.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "2.7.1",
-    "solc-0.7": "npm:solc@0.7.6",
-    "solidity-docgen": "^0.6.0-beta.36",
-    "typedoc": "^0.28.5",
-    "typedoc-plugin-markdown": "^4.6.3",
-    "typescript": "^4.8.4"
-  },
   "engines": {
-    "npm": "please-use-yarn",
-    "node": "18.x",
-    "yarn": ">=1.22"
+    "node": ">=18.0"
   }
 }

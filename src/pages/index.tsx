@@ -9,36 +9,29 @@ import GitHub from '@site/static/img/github.svg'
 import MinithonImage from '@site/static/img/minithon.png'
 import Layout from '@theme/Layout'
 import ThemedImage from '@theme/ThemedImage'
-import { TraceEvent } from '@uniswap/analytics'
-import {
-  BrowserEvent,
-  DocsHomepageElementName as ElementName,
-  DocsSectionName as SectionName,
-  SharedEventName,
-} from '@uniswap/analytics-events'
 import React from 'react'
 import { ArrowUpRight as LinkIcon, BookOpen, HelpCircle, Info, MessageCircle } from 'react-feather'
 
-import SearchBarWithAnalytics from '../theme/SearchBar'
+import SearchBar from '../theme/SearchBar'
 
 export const actions = [
   {
     title: 'What is Sherry',
     icon: Info,
     to: '/concepts/overview',
-    text: `Learn about Sherry and the core concepts of The Trigger Protocol.`,
+    text: `Learn about Sherry and how it enables automated Triggers and mini-apps on social media and wallets.`,
   },
   {
-    title: 'Create a Trigger dApp',
+    title: 'Create a Mini-App',
     icon: HelpCircle,
     to: '/sdk/trigger-sdk/overview',
-    text: `Learn with guided examples how to create your dApp with Trigger SDK, debug and publish it.`,
+    text: `Learn with guided examples how to create your mini-app with Trigger SDK, debug and publish it.`,
   },
   {
-    title: 'Integrate Trigger dApps',
+    title: 'Integrate Triggers',
     icon: BookOpen,
     to: '/sdk/trigger-sdk/overview',
-    text: `Learn how to integrate Trigger dApps into your social media, wallet, platforms and more.`,
+    text: `Learn how to integrate Triggers into your social media, wallet, and other platforms.`,
   },
 ]
 
@@ -82,9 +75,9 @@ export const dAppGuides = [
     to: '/sdk/trigger-sdk/guides/swaps/routing',
   },
   {
-    title: 'Provide liquidity',
-    text: "Contribute to a Pool's liquidity by using tokens to earn fees",
-    to: '/sdk/trigger-sdk/guides/liquidity/minting',
+    title: 'Create a Trigger',
+    text: 'Learn how to create and deploy custom Triggers',
+    to: '/sdk/trigger-sdk/guides/triggers/creating',
   },
 ]
 export const sherryGuides = [
@@ -315,7 +308,7 @@ export default function Home() {
           >
             <h1 style={{ fontWeight: 600 }}> Welcome to Sherry Docs</h1>
             <HideMedium>
-              <SearchBarWithAnalytics />
+              <SearchBar />
             </HideMedium>
           </div>
           <StyledTitleImage
@@ -326,28 +319,20 @@ export default function Home() {
           />
           <Row>
             {actions.map((action) => (
-              <TraceEvent
-                key={action.to}
-                element={action.to}
-                events={[BrowserEvent.onClick]}
-                name={SharedEventName.PAGE_CLICKED}
-                section={SectionName.WELCOME_LINKS}
-              >
-                <Link style={{ textDecoration: 'none' }} to={action.to}>
-                  <ShadowCard key={action.title}>
-                    <TopSection>
-                      <IconWrapper>
-                        <action.icon style={{ width: '24px' }} />
-                      </IconWrapper>
-                      <LinkIconWrapper>
-                        <LinkIcon />
-                      </LinkIconWrapper>
-                    </TopSection>
-                    <h3 style={{ marginBottom: '.75rem', fontWeight: 500 }}>{action.title}</h3>
-                    <p style={{ marginBottom: '0.5rem', fontWeight: 300 }}>{action.text}</p>
-                  </ShadowCard>
-                </Link>
-              </TraceEvent>
+              <Link style={{ textDecoration: 'none' }} to={action.to}>
+                <ShadowCard key={action.title}>
+                  <TopSection>
+                    <IconWrapper>
+                      <action.icon style={{ width: '24px' }} />
+                    </IconWrapper>
+                    <LinkIconWrapper>
+                      <LinkIcon />
+                    </LinkIconWrapper>
+                  </TopSection>
+                  <h3 style={{ marginBottom: '.75rem', fontWeight: 500 }}>{action.title}</h3>
+                  <p style={{ marginBottom: '0.5rem', fontWeight: 300 }}>{action.text}</p>
+                </ShadowCard>
+              </Link>
             ))}
           </Row>
         </DocsHeader>
@@ -361,30 +346,22 @@ export default function Home() {
         >
           {/* <div>
             <h2>Integrate your dApp</h2>
-            <p>Explore these guided tutorials to get started integrating with Uniswap in your dApp.</p>
+            <p>Explore these guided tutorials to get started integrating with Sherry in your dApp.</p>
             <div>
               {dAppGuides.map((action) => (
-                <TraceEvent
-                  key={action.to}
-                  element={action.to}
-                  events={[BrowserEvent.onClick]}
-                  name={SharedEventName.PAGE_CLICKED}
-                  section={SectionName.DAPP_LINKS}
-                >
-                  <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
-                    <Card key={action.title} style={{ marginBottom: '1rem' }}>
-                      <LinkRow>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                          <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
-                        </div>
-                        <LinkIconWrapper>
-                          <LinkIcon />
-                        </LinkIconWrapper>
-                      </LinkRow>
-                      <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
-                    </Card>
-                  </Link>
-                </TraceEvent>
+                <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
+                  <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                    <LinkRow>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
+                      </div>
+                      <LinkIconWrapper>
+                        <LinkIcon />
+                      </LinkIconWrapper>
+                    </LinkRow>
+                    <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div> */}
@@ -393,27 +370,19 @@ export default function Home() {
             <p>Follow these step-by-step guides to create powerful Triggers and integrate them into your applications.</p>
             <div>
               {sherryGuides.map((action) => (
-                <TraceEvent
-                  key={action.to}
-                  element={action.to}
-                  events={[BrowserEvent.onClick]}
-                  name={SharedEventName.PAGE_CLICKED}
-                  section={SectionName.SMART_CONTRACT_LINKS}
-                >
-                  <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
-                    <Card key={action.title} style={{ marginBottom: '1rem' }}>
-                      <LinkRow>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                          <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
-                        </div>
-                        <LinkIconWrapper>
-                          <LinkIcon />
-                        </LinkIconWrapper>
-                      </LinkRow>
-                      <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
-                    </Card>
-                  </Link>
-                </TraceEvent>
+                <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
+                  <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                    <LinkRow>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
+                      </div>
+                      <LinkIconWrapper>
+                        <LinkIcon />
+                      </LinkIconWrapper>
+                    </LinkRow>
+                    <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -422,27 +391,19 @@ export default function Home() {
             <p>Use these tools to build and test your Trigger dApps.</p>
             <div>
               {sherryTools.map((action) => (
-                <TraceEvent
-                  key={action.to}
-                  element={action.to}
-                  events={[BrowserEvent.onClick]}
-                  name={SharedEventName.PAGE_CLICKED}
-                  section={SectionName.SMART_CONTRACT_LINKS}
-                >
-                  <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
-                    <Card key={action.title} style={{ marginBottom: '1rem' }}>
-                      <LinkRow>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                          <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
-                        </div>
-                        <LinkIconWrapper>
-                          <LinkIcon />
-                        </LinkIconWrapper>
-                      </LinkRow>
-                      <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
-                    </Card>
-                  </Link>
-                </TraceEvent>
+                <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
+                  <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                    <LinkRow>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
+                      </div>
+                      <LinkIconWrapper>
+                        <LinkIcon />
+                      </LinkIconWrapper>
+                    </LinkRow>
+                    <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -464,88 +425,59 @@ export default function Home() {
           <div>
             <h2>Developer Links</h2>
             {developerLinks.map((action) => (
-              <TraceEvent
-                key={action.href}
-                element={action.href}
-                name={SharedEventName.PAGE_CLICKED}
-                events={[BrowserEvent.onClick]}
-                section={SectionName.DEVELOPER_LINKS}
-              >
-                <Link key={action.href} to={action.href}>
-                  <Card key={action.href} style={{ marginBottom: '0.5rem' }}>
-                    <LinkRow>
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <IconWrapper>
-                          <StyledIcon>
-                            <action.icon style={{ width: '24px' }} />
-                          </StyledIcon>
-                        </IconWrapper>
-                        {action.title}
-                      </div>
-                      <LinkIconWrapper>
-                        <LinkIcon />
-                      </LinkIconWrapper>
-                    </LinkRow>
-                  </Card>
-                </Link>
-              </TraceEvent>
+              <Link key={action.href} to={action.href}>
+                <Card key={action.href} style={{ marginBottom: '0.5rem' }}>
+                  <LinkRow>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <IconWrapper>
+                        <StyledIcon>
+                          <action.icon style={{ width: '24px' }} />
+                        </StyledIcon>
+                      </IconWrapper>
+                      {action.title}
+                    </div>
+                    <LinkIconWrapper>
+                      <LinkIcon />
+                    </LinkIconWrapper>
+                  </LinkRow>
+                </Card>
+              </Link>
             ))}
           </div>
         </TwoRow>
         <hr />
         <Row>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            element={ElementName.DISCORD}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/sherry'}>
-              <CenterCard>
-                <StyledIcon>
-                  <Discord style={{ width: '48px', height: '48px' }} />
-                </StyledIcon>
-                <div>
-                  <h3>Discord</h3>
-                  <p>Join our Developer Community.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            element={ElementName.GRANTS}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://x.com/sherryprotocol'}>
-              <CenterCard>
-                <MessageCircle style={{ width: '48px', height: '48px' }} />
-                <div>
-                  <h3>X feed</h3>
-                  <p>Keep up to date with the latest news and updates.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            element={ElementName.GITHUB}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://github.com/SherryLabs'}>
-              <CenterCard>
-                <StyledIcon>
-                  <GitHub style={{ width: '48px', height: '48px' }} />
-                </StyledIcon>
-                <div>
-                  <h3>GitHub</h3>
-                  <p>View all Sherry repositories.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
+          <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/sherry'}>
+            <CenterCard>
+              <StyledIcon>
+                <Discord style={{ width: '48px', height: '48px' }} />
+              </StyledIcon>
+              <div>
+                <h3>Discord</h3>
+                <p>Join our Developer Community.</p>
+              </div>
+            </CenterCard>
+          </Link>
+          <Link style={{ textDecoration: 'none' }} href={'https://x.com/sherryprotocol'}>
+            <CenterCard>
+              <MessageCircle style={{ width: '48px', height: '48px' }} />
+              <div>
+                <h3>X feed</h3>
+                <p>Keep up to date with the latest news and updates.</p>
+              </div>
+            </CenterCard>
+          </Link>
+          <Link style={{ textDecoration: 'none' }} href={'https://github.com/SherryLabs'}>
+            <CenterCard>
+              <StyledIcon>
+                <GitHub style={{ width: '48px', height: '48px' }} />
+              </StyledIcon>
+              <div>
+                <h3>GitHub</h3>
+                <p>View all Sherry repositories.</p>
+              </div>
+            </CenterCard>
+          </Link>
         </Row>
         <Link
           style={{

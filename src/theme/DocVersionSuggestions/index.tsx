@@ -28,7 +28,7 @@ function UnreleasedVersionLabel({ siteTitle, versionLabel }: VersionLabelProps) 
         versionLabel: <strong>{versionLabel}</strong>,
       }}
     >
-      {'This is unreleased documentation for the Uniswap Protocol.'}
+      {'This is unreleased documentation for the Sherry Protocol.'}
     </Translate>
   )
 }
