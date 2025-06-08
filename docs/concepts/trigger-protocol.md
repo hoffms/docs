@@ -22,6 +22,8 @@ In the context of the Sherry ecosystem and Web3 development, "triggers" refer to
 Within Sherry's ecosystem, triggers are the fundamental interactive elements or mini-apps that enable seamless, metadata-driven blockchain interactions embedded in social platforms, making Web3 actions accessible and intuitive for users.
 :::
 
+![Trigger Protocol Diagram](/img/triggerdiagram.png)
+
 ## Protocol Components
 
 ### Development Tools
@@ -35,8 +37,6 @@ Within Sherry's ecosystem, triggers are the fundamental interactive elements or 
 - **Nucleo**: A middleware tool responsible for sanitizing requests to the directory, ensuring security and integrity of app requests.
 - **Directory**: The hosting environment for ggApps. It manages app deployment and availability.
 - **MCP**: A server infrastructure that supports app creation through Chat, providing backend services necessary for the chat-based app development workflow.
-
-![Trigger Protocol Diagram](/img/triggerdiagram.png)
 
 ### Integration & Deployment
 

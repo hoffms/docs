@@ -1009,103 +1009,86 @@ export async function OPTIONS(request: NextRequest) {
 <Tabs>
 <TabItem value="technical" label="Requisitos Técnicos" default>
 
-<div
-  style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '1rem',
-  }}
->
-  <div style={{ padding: '1rem', border: '2px solid #10b981', borderRadius: '8px' }}>
-    <h4>Interacción con Contratos Inteligentes</h4>
-    <p>Funcionalidad significativa más allá de transferencias simples</p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+  <div className="p-4 border border-solid border-[var(--ifm-color-emphasis-300)] rounded-lg">
+    <h4>🎨 Colecciones NFT</h4>
+    <p>Permite a los usuarios acuñar NFTs directamente desde publicaciones</p>
   </div>
-  <div style={{ padding: '1rem', border: '2px solid #10b981', borderRadius: '8px' }}>
-    <h4>Lógica de Negocio Personalizada</h4>
-    <p>Algoritmos únicos que agregan valor real</p>
+
+  <div className="p-4 border border-solid border-[var(--ifm-color-emphasis-300)] rounded-lg">
+    <h4>🔄 Intercambios de Tokens</h4>
+    <p>Habilita el trading DeFi sin salir de las redes sociales</p>
   </div>
-  <div style={{ padding: '1rem', border: '2px solid #10b981', borderRadius: '8px' }}>
-    <h4>Múltiples Parámetros</h4>
-    <p>Manejo sofisticado de datos</p>
+
+  <div className="p-4 border border-solid border-[var(--ifm-color-emphasis-300)] rounded-lg">
+    <h4>🗳️ Gobernanza DAO</h4>
+    <p>Integra votaciones directamente en discusiones comunitarias</p>
   </div>
-  <div style={{ padding: '1rem', border: '2px solid #10b981', borderRadius: '8px' }}>
-    <h4>Manejo de Errores</h4>
-    <p>Mensajes de error amigables para el usuario</p>
+
+  <div className="p-4 border border-solid border-[var(--ifm-color-emphasis-300)] rounded-lg">
+    <h4>💝 Donaciones</h4>
+    <p>Acepta donaciones en crypto con montos y destinatarios personalizados</p>
   </div>
 </div>
 
 </TabItem>
 <TabItem value="creativity" label="Factores de Creatividad">
 
-<div
-  style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '1rem',
-  }}
->
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Casos de Uso Únicos</h4>
-    <p>Que resuelvan problemas reales</p>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  <div className="border rounded-lg p-4">
+    <h3 className="font-semibold mb-2">📚 Documentación</h3>
+    <p className="text-sm text-gray-600">Referencia completa de API y guías</p>
   </div>
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Algoritmos Innovadores</h4>
-    <p>O procesamiento de datos</p>
+
+  <div className="border rounded-lg p-4">
+    <h3 className="font-semibold mb-2">💬 Comunidad</h3>
+    <p className="text-sm text-gray-600">
+      <a href="https://discord.com/invite/sherry" className="text-blue-600 hover:underline">
+        Únete a nuestro Discord
+      </a>
+    </p>
   </div>
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Combinaciones de Parámetros Interesantes</h4>
-    <p>Que aporten funcionalidad útil</p>
+
+  <div className="border rounded-lg p-4">
+    <h3 className="font-semibold mb-2">🐛 Problemas</h3>
+    <p className="text-sm text-gray-600">
+      <a
+        href="https://github.com/orgs/SherryLabs/repositories"
+        className="text-blue-600 hover:underline"
+      >
+        Reportar en GitHub
+      </a>
+    </p>
   </div>
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Aplicaciones Prácticas</h4>
-    <p>Para usuarios reales</p>
+
+  <div className="border rounded-lg p-4">
+    <h3 className="font-semibold mb-2">📖 Ejemplos</h3>
+    <p className="text-sm text-gray-600">Ejemplos funcionales y demos completos</p>
   </div>
 </div>
 
 </TabItem>
 <TabItem value="examples" label="Buenas Ideas">
 
-<div
-  style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '1rem',
-  }}
->
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Herramientas DeFi</h4>
-    <p>
-      Calculadoras de rendimiento personalizadas, rebalanceo de portafolio, estrategias
-      automatizadas
-    </p>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  <div className="border rounded-lg p-4">
+    <h4>🎨 Colecciones NFT</h4>
+    <p>Permite a los usuarios acuñar NFTs directamente desde publicaciones</p>
   </div>
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Gaming</h4>
-    <p>Mecánicas de juego on-chain, interacciones NFT, sistemas de puntuación</p>
+
+  <div className="border rounded-lg p-4">
+    <h4>🔄 Intercambios de Tokens</h4>
+    <p>Habilita el trading DeFi sin salir de las redes sociales</p>
   </div>
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Social</h4>
-    <p>Mensajería descentralizada, sistemas de reputación, herramientas comunitarias</p>
+
+  <div className="border rounded-lg p-4">
+    <h4>🗳️ Gobernanza DAO</h4>
+    <p>Integra votaciones directamente en discusiones comunitarias</p>
   </div>
-  <div
-    style={{ padding: '1rem', border: '1px solid var(--ifm-color-primary)', borderRadius: '8px' }}
-  >
-    <h4>Productividad</h4>
-    <p>Gestión de tareas con recompensas de tokens, herramientas colaborativas</p>
+
+  <div className="border rounded-lg p-4">
+    <h4>💝 Donaciones</h4>
+    <p>Acepta donaciones en crypto con montos y destinatarios personalizados</p>
   </div>
 </div>
 
@@ -1114,29 +1097,25 @@ export async function OPTIONS(request: NextRequest) {
 
 ### Qué No Será Aceptado en el Minithon
 
-<div
-  style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '1rem',
-    margin: '1rem 0',
-  }}
->
-  <div style={{ padding: '1rem', border: '2px solid #dc2626', borderRadius: '8px' }}>
-    <h4>Transferencias Simples de Tokens</h4>
-    <p>Usa nuestro TransferAction en su lugar</p>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  <div className="border rounded-lg p-4">
+    <h4>🎨 Colecciones NFT</h4>
+    <p>Permite a los usuarios acuñar NFTs directamente desde publicaciones</p>
   </div>
-  <div style={{ padding: '1rem', border: '2px solid #dc2626', borderRadius: '8px' }}>
-    <h4>Ejemplos Copiados y Pegados</h4>
-    <p>Sin modificaciones significativas</p>
+
+  <div className="border rounded-lg p-4">
+    <h4>🔄 Intercambios de Tokens</h4>
+    <p>Habilita el trading DeFi sin salir de las redes sociales</p>
   </div>
-  <div style={{ padding: '1rem', border: '2px solid #dc2626', borderRadius: '8px' }}>
-    <h4>Sin Contratos Inteligentes</h4>
-    <p>Las mini apps deben interactuar con contratos</p>
+
+  <div className="border rounded-lg p-4">
+    <h4>🗳️ Gobernanza DAO</h4>
+    <p>Integra votaciones directamente en discusiones comunitarias</p>
   </div>
-  <div style={{ padding: '1rem', border: '2px solid #dc2626', borderRadius: '8px' }}>
-    <h4>Implementaciones Rotas</h4>
-    <p>Deben funcionar de extremo a extremo</p>
+
+  <div className="border rounded-lg p-4">
+    <h4>💝 Donaciones</h4>
+    <p>Acepta donaciones en crypto con montos y destinatarios personalizados</p>
   </div>
 </div>
 
@@ -1421,23 +1400,15 @@ Este repositorio contiene:
 
 ---
 
-<div
-  style={{
-    textAlign: 'center',
-    padding: '2rem',
-    backgroundColor: 'var(--ifm-color-primary-contrast-background)',
-    borderRadius: '8px',
-    margin: '2rem 0',
-  }}
->
+<div className="text-center p-8 bg-[var(--ifm-color-primary-contrast-background)] rounded-lg my-8">
   <h2>🚀 ¿Listo para Construir Algo Increíble?</h2>
   <p>
-    Recuerda, la clave para un envío exitoso al minithon no es solo hacer que funcione, sino hacerlo{' '}
-    <strong>útil</strong>, <strong>innovador</strong> y <strong>técnicamente impresionante</strong>.
-    Enfócate en resolver problemas reales con soluciones creativas que demuestren el poder de la
-    tecnología blockchain combinada con una gran experiencia de usuario.
+    Recuerda, la clave para una presentación exitosa en el minithon no es solo hacer que funcione, sino hacerlo{' '}
+    <strong>útil</strong>, <strong>innovador</strong>, y{' '}
+    <strong>técnicamente impresionante</strong>. Enfócate en resolver problemas reales con soluciones creativas
+    que demuestren el poder de la tecnología blockchain combinada con una gran experiencia de usuario.
   </p>
   <p>
-    <strong>¡Buena suerte con el desarrollo de tu mini app y el envío al minithon! 🏆</strong>
+    <strong>¡Buena suerte con el desarrollo de tu mini app y tu presentación en el minithon! 🏆</strong>
   </p>
 </div>
