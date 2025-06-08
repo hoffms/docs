@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_uniswap_docs=self.webpackChunk_uniswap_docs||[]).push([[7723],{9602:s=>{s.exports=JSON.parse('{"name":"api","permalink":"/docs/tags/api","docs":[{"id":"api/Actions/http-actions","title":"HTTP Actions","description":"Documentation for HTTP Actions in Sherry Protocol","permalink":"/docs/api/Actions/http-actions"}],"allTagsPath":"/docs/tags"}')}}]);
