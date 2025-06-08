@@ -15,12 +15,13 @@ Each action is fully configurable and paired with structured parameters to suppo
 
 **Actions** are the core interactive units that define what a Trigger dApp can do. Each action represents a specific task the user can perform—such as sending tokens, calling a smart contract, or initiating a multi-step flow.
 
-Sherry supports **4 action types**, each optimized for different complexity levels and use cases:
+Sherry supports **5 action types**, each optimized for different complexity levels and use cases:
 
 - Dynamic Actions
 - Blockchain Actions
 - Transfer Actions
 - Flow Actions
+- HTTP Actions (Coming Soon)
 
 
 ### 🚀 Dynamic Actions - Best for complex logic
@@ -187,6 +188,17 @@ For complex multi-step processes that combine different action types with condit
 - Complex DeFi workflows (approve → swap → stake)
 - Conditional business logic
 - Multi-step transactions with user decisions
+
+### 🌐 HTTP Actions - Web Service Interactions
+
+(`type: 'http'`) - Coming Soon
+For direct interaction with web services and APIs through the Sherry Protocol. While currently in development, HTTP Actions can be used within Action Flows for basic HTTP requests.
+
+**Perfect for:**
+- Making authenticated API calls
+- Processing web service responses
+- Integrating with external services
+- Managing API keys securely
 
 ---
 
@@ -386,3 +398,4 @@ const amountParam = createParameter(PARAM_TEMPLATES.AMOUNT, {
 - [**Blockchain Actions**](../api-reference/action-types/blockchain-actions) - Direct contract interactions
 - [**Transfer Actions**](../api-reference/action-types/transfer-actions) - Simple native token transfers
 - [**Action Flows**](../api-reference/action-types/action-flows) - Multi-step workflows
+- [**HTTP Actions**](../api-reference/action-types/http-actions) - Web service interactions (Coming Soon)

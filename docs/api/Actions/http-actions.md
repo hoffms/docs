@@ -1,8 +1,8 @@
 ---
 id: http-actions
-title: HTTP Actions API
-description: Documentation for HTTP Actions in Sherry Protocol
 sidebar_position: 5
+title: HTTP Actions
+description: Documentation for HTTP Actions in Sherry Protocol
 tags: [api, actions, http, server]
 ---
 

@@ -1,3 +1,9 @@
+---
+id: transfer-actions
+sidebar_position: 3
+title: Transfer Actions
+---
+
 # Transfer Actions
 
 ## Simple & Interactive Native Token Transfers

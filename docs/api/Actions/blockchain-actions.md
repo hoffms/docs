@@ -1,3 +1,9 @@
+---
+id: blockchain-actions
+sidebar_position: 1
+title: Blockchain Actions
+---
+
 # Blockchain Actions
 
 Blockchain Actions allow you to interact with smart contract functions on various blockchains. They're the most powerful action type in the Sherry SDK, enabling complex DeFi interactions, NFT operations, and DAO governance.
