@@ -8,7 +8,7 @@ title: Intermediate Examples
 
 Ready to build more sophisticated mini-apps.
 
-### 5. **Token Approval + Swap Flow**
+## 5. Token Approval + Swap Flow
 
 **⏱️ Setup: 15 minutes** | **Action Type: Flow**
 
@@ -128,15 +128,12 @@ const tokenSwapFlow: ActionFlow = {
 ```
 
 **🎯 What you'll learn:**
-
 - Multi-step Action Flows
 - Conditional navigation between steps
 - Parameter passing between actions
 - Error handling in flows
 
----
-
-### 6. **DAO Voting with Proposals**
+## 6. DAO Voting with Proposals
 
 **⏱️ Setup: 10 minutes** | **Action Type: Blockchain**
 
@@ -205,15 +202,12 @@ const daoVotingApp: Metadata = {
 ```
 
 **🎯 What you'll learn:**
-
 - Complex parameter selection
 - Boolean parameter handling
 - Real-world DAO integration
 - Meaningful vote descriptions
 
----
-
-### 7. **Cross-Chain Asset Bridge**
+## 7. Cross-Chain Asset Bridge
 
 **⏱️ Setup: 12 minutes** | **Action Type: Blockchain**
 
@@ -282,15 +276,12 @@ const bridgeApp: Metadata = {
 ```
 
 **🎯 What you'll learn:**
-
 - Cross-chain action configuration
 - Token selection with descriptions
 - Address validation across chains
 - Fixed vs dynamic parameters
 
----
-
-### 8. **Multi-Step User Onboarding**
+## 8. Multi-Step User Onboarding
 
 **⏱️ Setup: 20 minutes** | **Action Type: Flow**
 
@@ -417,7 +408,6 @@ const onboardingFlow: ActionFlow = {
 ```
 
 **🎯 What you'll learn:**
-
 - Complex multi-step flows
 - Decision trees and branching
 - Data passing between steps

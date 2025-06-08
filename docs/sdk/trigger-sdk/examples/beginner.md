@@ -8,7 +8,7 @@ title: Beginner Examples
 
 Perfect for getting started with the SDK basics.
 
-### 1. **Simple Creator Tip**
+## 1. Simple Creator Tip
 
 **⏱️ Setup: 2 minutes** | **Action Type: Transfer**
 
@@ -45,14 +45,11 @@ export default createMetadata(creatorTipApp);
 ```
 
 **🎯 What you'll learn:**
-
 - Basic Transfer Action setup
 - Interactive amount selection
 - User-friendly option labeling
 
----
-
-### 2. **Charity Donation Selector**
+## 2. Charity Donation Selector
 
 **⏱️ Setup: 3 minutes** | **Action Type: Transfer**
 
@@ -105,14 +102,11 @@ const charityApp: Metadata = {
 ```
 
 **🎯 What you'll learn:**
-
 - Both recipient and amount selection
 - Dropdown vs radio button UX
 - Meaningful option descriptions
 
----
-
-### 3. **Fixed-Price NFT Mint**
+## 3. Fixed-Price NFT Mint
 
 **⏱️ Setup: 5 minutes** | **Action Type: Blockchain**
 
@@ -169,15 +163,12 @@ const simpleNFTApp: Metadata = {
 ```
 
 **🎯 What you'll learn:**
-
 - Basic Blockchain Action setup
 - Working with contract ABIs
 - Fixed vs user-input parameters
 - Payable function handling
 
----
-
-### 4. **Simple Newsletter Signup**
+## 4. Simple Newsletter Signup
 
 **⏱️ Setup: 3 minutes** | **Action Type: HTTP**
 
@@ -239,8 +230,7 @@ const newsletterApp: Metadata = {
 ```
 
 **🎯 What you'll learn:**
-
 - HTTP Action basics
 - Form parameter types
 - Email validation
-- Radio vs select options 
+- Radio vs select options

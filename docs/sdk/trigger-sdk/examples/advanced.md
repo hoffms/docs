@@ -8,7 +8,7 @@ title: Advanced Examples
 
 Complex mini-apps with server-side logic and optimization.
 
-### 1. **AI-Powered Yield Optimizer**
+## 1. AI-Powered Yield Optimizer
 
 **⏱️ Setup: 30 minutes** | **Action Type: Dynamic**
 
@@ -172,9 +172,7 @@ async function calculateOptimalAllocation(config: any) {
 - Real-time data processing
 - Advanced parameter handling
 
----
-
-### 2. **Dynamic NFT Pricing Engine**
+## 2. Dynamic NFT Pricing Engine
 
 **⏱️ Setup: 25 minutes** | **Action Type: Dynamic**
 
@@ -335,9 +333,7 @@ async function detectWhaleActivity() {
 - Bulk discount calculations
 - Market sentiment integration
 
----
-
-### 3. **Advanced Arbitrage Bot**
+## 3. Advanced Arbitrage Bot
 
 **⏱️ Setup: 35 minutes** | **Action Type: Dynamic**
 
