@@ -1,15 +1,46 @@
 name: Algolia Search
 
 on:
+  # Run automatically every day at 10:00 UTC
   schedule:
     - cron: '0 10 * * *'
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual indexing'
+        required: true
+        default: 'Manual indexing triggered'
 
 jobs:
-  build:
+  algolia:
+    name: Index Documentation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run Scraper
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Run Algolia DocSearch Scraper
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
         run: |
-          sudo apt-get update && sudo apt-get install -y jq
-          docker run -e "APPLICATION_ID=${{ secrets.ALGOLIA_APP_ID }}" -e "API_KEY=${{ secrets.API_KEY }}" -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
+          echo "Starting Algolia indexing..."
+          echo "Using application ID: ${APPLICATION_ID}"
+          echo "Config file contents:"
+          cat ./config.json | jq '.'
+          
+          docker run \
+            -e "APPLICATION_ID=${APPLICATION_ID}" \
+            -e "API_KEY=${API_KEY}" \
+            -e "CONFIG=$(cat ./config.json | jq -r tostring)" \
+            algolia/docsearch-scraper
+          
+          echo "Indexing completed successfully!"
+        continue-on-error: false

@@ -28,9 +28,9 @@ module.exports = {
       additionalLanguages: ['solidity'],
     },
     algolia: {
-      apiKey: '32465e2ab6f7554ff014e64c0d92171c',
+      apiKey: 'b15b80b3a608a5ad5f62c724fe4ab9f8',
       indexName: 'sherry-docs',
-      appId: 'S0IDD0YGLZ',
+      appId: 'YX4I9460PL',
     },
     navbar: {
       title: '',
